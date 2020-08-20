@@ -664,7 +664,7 @@ static void rgblight_layers_write(void) {
             // Write segment.count LEDs
             LED_TYPE *const limit = &led[MIN(segment.index + segment.count, RGBLED_NUM)];
             for (LED_TYPE *led_ptr = &led[segment.index]; led_ptr < limit; led_ptr++) {
-                sethsv(segment.hue, segment.sat, segment.val, led_ptr);
+                sethsv(segment.hue, segment.sat, (segment.val * rgblight_config.val) >> 8, led_ptr);
             }
             segment_ptr++;
         }
