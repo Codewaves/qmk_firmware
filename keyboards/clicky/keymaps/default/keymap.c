@@ -44,7 +44,8 @@ enum custom_keycodes {
 #define SPC_LWR LT(_LOWER, KC_SPC)
 #define SPC_RSE LT(_RAISE, KC_SPC)
 #define TAB_LAL LALT_T(KC_TAB)
-#define ENT_ADJ LT(_ADJUST, KC_ENT)
+#define ENT_FUN LT(_FUNCTION, KC_ENT)
+#define ENT_SFT LSFT_T(KC_ENT)
 
 #define CL_CUT LCTL(KC_X)
 #define CL_COPY LCTL(KC_C)
@@ -61,14 +62,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,  KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,         KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, KC_ESC, \
     KC_LSFT, KC_A,    KC_R,    KC_S,    KC_T,    KC_D,         KC_H,    KC_N,    KC_E,    KC_I,    KC_O,    KC_RSFT, \
     KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,         KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RCTL, \
-                               KC_BSPC, SPC_LWR, TAB_LAL,      ENT_ADJ, SPC_RSE, KC_DEL \
+                               KC_BSPC, SPC_LWR, TAB_LAL,      ENT_SFT, SPC_RSE, KC_DEL \
 ),
 
 [_QWERTY] = LAYOUT(\
     KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_ESC, \
     KC_LSFT, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,         KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_RSFT, \
     KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,         KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RCTL, \
-                               KC_BSPC, SPC_LWR, TAB_LAL,      ENT_ADJ, SPC_RSE, KC_DEL \
+                               KC_BSPC, SPC_LWR, TAB_LAL,      ENT_SFT, SPC_RSE, KC_DEL \
 ),
 
 [_LOWER] = LAYOUT(\
