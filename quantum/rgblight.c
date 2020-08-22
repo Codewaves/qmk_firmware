@@ -706,7 +706,7 @@ void rgblight_set(void) {
     uint8_t   num_leds = rgblight_ranges.clipping_num_leds;
 
     if (!rgblight_config.enable) {
-        for (uint8_t i = rgblight_ranges.effect_start_pos; i < rgblight_ranges.effect_end_pos; i++) {
+        for (uint8_t i = 0; i < RGBLED_NUM; i++) {
             led[i].r = 0;
             led[i].g = 0;
             led[i].b = 0;
