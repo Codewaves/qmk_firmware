@@ -33,3 +33,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // If you are using an Elite C rev3 on the slave side, uncomment the lines below:
 #define SPLIT_USB_DETECT
 #define NO_USB_STARTUP_CHECK
+
+#define PERMISSIVE_HOLD
+
+/* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
+#define DEBOUNCE 30
